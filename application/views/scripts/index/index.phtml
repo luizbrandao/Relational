@@ -1,0 +1,22 @@
+<div>
+    <table>
+        <thead>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Fax</th>
+            <th>Address Count</th>
+        </thead>
+        <?php 
+
+        foreach($this->resultado as $usuarios): ?>
+            <tr>
+                <td><?php echo $usuarios->getUsername(); ?></td>
+                <td><?php echo $usuarios->getEmail(); ?></td>
+                <td><?php echo $usuarios->getPhone(); ?></td>
+                <td><?php echo $usuarios->getFax(); ?></td>
+                <td><?php echo $usuarios->getAddressCount() ; ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+</div>
