@@ -20,6 +20,7 @@
           <layoutScriptFile layoutName="layout"/>
         </layoutScriptsDirectory>
       </layoutsDirectory>
+      <layoutsDirectory enabled="false"/>
       <modelsDirectory>
         <dbTableDirectory>
           <dbTableFile dbTableName="User"/>
@@ -83,6 +84,8 @@
           </viewsDirectory>
         </moduleDirectory>
       </modulesDirectory>
+      </modelsDirectory>
+      <modulesDirectory enabled="false"/>
       <viewsDirectory>
         <viewScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Index">

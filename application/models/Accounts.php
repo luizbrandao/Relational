@@ -2,32 +2,34 @@
 
 class Application_Model_Accounts
 {
+
 	protected $id;
-    protected $username;
-    protected $password;
-    protected $email;
-    protected $phone;
-    protected $fax;
-    protected $address1;
-    protected $address2;
-    protected $type_id;
-    
-    public function setId($id){
-        $this->id = (int) $id;
-        return $this;
-    }
+	protected $username;
+	protected $password;
+	protected $email;
+	protected $phone;
+	protected $fax;
+	protected $address1;
+	protected $address2;
+	protected $type_id;
 
-    public function getId(){
-        return $this->id;
-    }
+	public function setId($id){
+		$this->_id = (int) $id;
 
-    public function getUsername ()
-    {
-        return $this->username;
-    }
+		return $this;
+	}
 
-    public function setUsername ($username)
-    {
+	public function getId(){
+		return $this->id;
+	}
+
+	public function getUsername ()
+	{
+		return $this->username;
+	}
+
+	public function setUsername ($username)
+	{
         $this->username = (string) $username;
         return $this;
     }
@@ -44,6 +46,8 @@ class Application_Model_Accounts
     {
         return $this->email;
     }
+
+  
 
     public function setEmail ($email)
     {
@@ -72,7 +76,7 @@ class Application_Model_Accounts
         $this->fax = (string) $fax;
         return $this;
     }
-    
+
     public function getAddress1(){
         return $this->address1;
     }
@@ -90,7 +94,7 @@ class Application_Model_Accounts
         $this->address2 = (string) $address2;
         return $this;
     }
-    
+
     public function getTypeId()
     {
         return $this->type_id;
@@ -102,6 +106,17 @@ class Application_Model_Accounts
         return $this;
     }
 
+    public function getAddressCount ()
+    {
+        return $this->addressCount;
+    }
+
+    public function setAddressCount ($addressCount)
+    {
+        $this->addressCount = (int) $addressCount;
+        return $this;
+    }
+
     public function getMapper()
     {
         if (null === $this->mapper) {
@@ -109,7 +124,7 @@ class Application_Model_Accounts
         }
         return $this->mapper;
     }
-    
+
     public function populate($row)
     {
         if (is_array($row)) {
@@ -124,6 +139,7 @@ class Application_Model_Accounts
         if (isset($row->password)) {
             $this->setPassword($row->password);
         }
+
         if (isset($row->email)) {
             $this->setEmail($row->email);
         }
@@ -133,6 +149,7 @@ class Application_Model_Accounts
         if (isset($row->fax)) {
             $this->setFax($row->fax);
         }
+
         if (isset($row->address1)) {
             $this->setAddress1($row->address1);
         }
@@ -143,7 +160,7 @@ class Application_Model_Accounts
             $this->setTypeId($row->type_id);
         }
     }
-    
+
     public function toArray()
     {
         return array (

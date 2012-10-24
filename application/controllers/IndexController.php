@@ -34,6 +34,7 @@ class IndexController extends Zend_Controller_Action
         $model->setAddress1('rua dos testes');
         $model->setAddress2('rua dos validacoes');
         $model->setTypeId(2);
+
         
         $res = $this->_db->save($model);
 

@@ -1,4 +1,5 @@
 <?php
+
 class Application_Model_AccountsMapper
 {
 	public function getDbTable()
@@ -27,6 +28,7 @@ class Application_Model_AccountsMapper
         if (null !== ($resultSet = $this->getDbTable()->fetchAll($where, $order, $count, $offset))) {
             foreach ($resultSet as $row) {
                 $model = new $className;
+
                 // if (!$model instanceof Application_Model_Abstract) {
                 //     require_once 'Zend/Exception.php';
                 //     throw new Zend_Exception('Invalid model class provided');
@@ -38,7 +40,7 @@ class Application_Model_AccountsMapper
                     'User'
                 );
                 $contact = $contacts->current();
-                
+
                 $model->populate($contact);
                 unset($contacts, $contact);
                 
@@ -48,7 +50,11 @@ class Application_Model_AccountsMapper
                     'User'
                 );
                 $addressCount = count($addresses);
+
                 $model->setTypeId($addressCount);
+
+                $model->setAddressCount($addressCount);
+
                 unset($addresses, $addressCount);
                 
                 // now it's time to add our user details to the model

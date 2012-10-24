@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 SetEnv APPLICATION_ENV development
 
 RewriteEngine On
+=======
+SetEnv APPLICATION_ENV development
+
+RewriteEngine On
+>>>>>>> a400e9577bcf3a4f4e801701b9564906b98fad8b
 RewriteRule .* index.php

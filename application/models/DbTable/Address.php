@@ -12,7 +12,6 @@ class Application_Model_DbTable_Address extends Zend_Db_Table_Abstract
     		'refTableClass'=>'Application_Model_DbTable_User',
     		'refColumns'=>array('id')
     	),
-        
     	'Type'=>array(
     		'columns'=>array('type_id'),
     		'refTableClass'=>'Application_Model_DbTable_AddressType',

@@ -6,7 +6,8 @@
             <th>Telefone</th>
             <th>Fax</th>
             <th>Address Count</th>
-        </thead>
+        </thead
+
         <?php foreach($this->resultado as $usuarios): ?>
             <tr>
                 <td><?php echo $usuarios->getUsername(); ?></td>
@@ -14,6 +15,7 @@
                 <td><?php echo $usuarios->getPhone(); ?></td>
                 <td><?php echo $usuarios->getFax(); ?></td>
                 <td><?php if($usuarios->getTypeId() == 1){ echo "Home address"; } else { echo "Billing address"; } ?></td>
+                <td><?php echo $usuarios->getAddressCount() ; ?></td>
             </tr>
         <?php endforeach; ?>
     </table>
