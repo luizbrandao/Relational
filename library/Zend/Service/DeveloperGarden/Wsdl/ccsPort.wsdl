@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wsdl:definitions xmlns:ns="http://schemas.xmlsoap.org/soap/encoding/" xmlns:schema="http://ccs.developer.telekom.com/schema/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy" xmlns:tns="http://ccs.developer.telekom.com/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ccs" targetNamespace="http://ccs.developer.telekom.com/wsdl/">
-	<wsdl:documentation>
-CCS </wsdl:documentation>
+	<wsdl:documentation>CCS</wsdl:documentation>
 	<wsdl:types>
 		<xsd:schema targetNamespace="http://ccs.developer.telekom.com/wsdl/">
 			<xsd:import namespace="http://ccs.developer.telekom.com/schema/" schemaLocation="ccsPort.xsd"/>

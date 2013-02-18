@@ -50,50 +50,39 @@
 	</wsdl:portType>
 	<wsdl:binding name="ODGBaseUserServiceSOAP" 
 		type="tns:ODGBaseUserService">
-
 		<soap:binding style="document"
 			transport="http://schemas.xmlsoap.org/soap/http" />
 		<wsdl:operation name="changeQuotaPool">
-
 			<soap:operation
 				soapAction="http://odg.tonline.de/ODGBaseUserService/changeQuotaPool" />
 			<wsdl:input>
-
 				<soap:body use="literal" />
 			</wsdl:input>
 			<wsdl:output>
-
 				<soap:body use="literal" />
 			</wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="getQuotaInformation">
-
 			<soap:operation
 				soapAction="http://odg.tonline.de/ODGBaseUserService/getQuotaInformation" />
 			<wsdl:input>
-
 				<soap:body use="literal" />
 			</wsdl:input>
 			<wsdl:output>
-
 				<soap:body use="literal" />
 			</wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="getAccountBalance">
-
 			<soap:operation
 				soapAction="http://odg.tonline.de/ODGBaseUserService/getAccountBalance" />
 			<wsdl:input>
-
 				<soap:body use="literal" />
 			</wsdl:input>
 			<wsdl:output>
-
 				<soap:body use="literal" />
 			</wsdl:output>
 		</wsdl:operation>
 	</wsdl:binding>
-
 	<wsdl:service name="ODGBaseUserService">
 		<wsdl:port name="ODGBaseUserService"
 			binding="tns:ODGBaseUserServiceSOAP">

@@ -15,10 +15,8 @@
 			elementFormDefault="unqualified"
 			attributeFormDefault="unqualified">
 			<xsd:include schemaLocation="VoiceButlerService.xsd" />
-			
 		</xsd:schema>
 	</wsdl:types>
-
 	<wsdl:message name="callStatusRequest">
 		<wsdl:part name="parameters" element="tns:callStatus" />
 	</wsdl:message>
@@ -43,7 +41,6 @@
  	<wsdl:message name="newCallResponse">
 		<wsdl:part name="parameters" element="tns:newCallResponse" />
 	</wsdl:message>
-
 	<wsdl:message name="newCallSequencedRequest">
 		<wsdl:part name="parameters" element="tns:newCallSequenced"/>
 	</wsdl:message>
@@ -82,61 +79,47 @@
         wsaw:Action="urn:newCallSequenceResponse" />
 		</wsdl:operation>
 	</wsdl:portType>
- 
 	<wsdl:binding name="VoiceButlerServiceHttpBinding"
 		type="tns:VoiceButlerServicePortType">
-
 		<soap:binding style="document"
 			transport="http://schemas.xmlsoap.org/soap/http" />
 		<wsdl:operation name="callStatus">
-
 			<soap:operation
 				soapAction="http://webservice.voicebutler.odg.tonline.de/callStatus" />
 			<wsdl:input>
-
 				<soap:body use="literal" />
 			</wsdl:input>
 			<wsdl:output>
-
 				<soap:body use="literal" />
 			</wsdl:output>
 		</wsdl:operation>
       <wsdl:operation name="callStatus2">
-  
         <soap:operation
           soapAction="http://webservice.voicebutler.odg.tonline.de/callStatus2" />
         <wsdl:input>
-  
           <soap:body use="literal" />
         </wsdl:input>
         <wsdl:output>
-  
           <soap:body use="literal" />
         </wsdl:output>
       </wsdl:operation>
 		<wsdl:operation name="tearDownCall">
-
 			<soap:operation
 				soapAction="http://webservice.voicebutler.odg.tonline.de/tearDownCall" />
 			<wsdl:input>
-
 				<soap:body use="literal" />
 			</wsdl:input>
 			<wsdl:output>
-
 				<soap:body use="literal" />
 			</wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="newCall">
-
 			<soap:operation
 				soapAction="http://webservice.voicebutler.odg.tonline.de/newCall" />
 			<wsdl:input>
-
 				<soap:body use="literal" />
 			</wsdl:input>
 			<wsdl:output>
-
 				<soap:body use="literal" />
 			</wsdl:output>
 		</wsdl:operation>
@@ -151,12 +134,9 @@
 			</wsdl:output>
 		</wsdl:operation>
 	</wsdl:binding>
-
 	<wsdl:service name="VoiceButlerService">
-
 		<wsdl:port name="VoiceButlerService"
 			binding="tns:VoiceButlerServiceHttpBinding">
-
 			<soap:address
 				location="https://gateway.developer.telekom.com/p3gw-mod-odg-voicebutler/services/VoiceButlerService" />
 		</wsdl:port>

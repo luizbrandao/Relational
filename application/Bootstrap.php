@@ -6,7 +6,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     {
         // Setup autoloader with namespace
         $autoloader = Zend_Loader_Autoloader::getInstance();
-        $autoloader->registerNamespace('ZFDebug');
+        $autoloader->registerNamespace('ZFDebug_');
 
         // Ensure the front controller is initialized
         $this->bootstrap('FrontController');
